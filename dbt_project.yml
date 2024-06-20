@@ -28,6 +28,8 @@ models:
       +materialized: ephemeral
 vars:
   zendesk:
+    zendesk_database: snowflake_prashast
+    zendesk_schema: zendesk 
     ticket_field_history_columns: ['assignee_id', 'status', 'priority']
     ticket_field_history_updater_columns: []
     group: "{{ ref('stg_zendesk__group') }}"
